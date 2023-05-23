@@ -1,0 +1,332 @@
+/*colors*/
+:root {
+    --primary-color:#000000;
+    --secondary-color:#9e9f9e;
+    --primary-white:#fff;
+    --primary-red: #6b002c;
+    --primary-cream: #ead3c1;
+    --primary-grey: #ddd4d4;
+}
+
+
+
+/* ================================================= */
+/* General styles */
+/* ================================================= */
+body{
+    overflow-y:scroll;
+    scroll-behavior:smooth;
+    font-family:"Gothic A1", sans-serif
+}
+body h1{
+    font-size:2.813em;
+    color: var(--primary-white);
+    font-weight:700
+}
+body h2{
+    font-size:32px;
+    font-weight:700
+}
+body h3{
+    font-size:24px;
+    color: var(--primary-red);
+}
+body h4{
+    font-size:20px;
+    color:var(--primary-red);
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+body h5{
+    font-size:14px;
+    color:var(--primary-red);
+}
+body h6{
+    font-size:12px;
+    color:var(--primary-red);
+}
+body p{
+    font-size:1em;
+    line-height:24px;
+    color:#666;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+body li{
+    color:#666;
+    line-height:24px
+}
+a{
+    text-decoration:none;
+    font-family:"Gothic A1", sans-serif;
+    color:var(--primary-red);
+}
+a:hover,a:focus,a:active{
+    text-decoration:inherit
+}
+figure{
+    margin-bottom:0px !important;
+    padding:0
+}
+*{
+    margin:0;
+    padding:0
+}
+* *::after,* *::before{
+    box-sizing:border-box
+}
+html{
+    height:100%;
+    scroll-behavior:smooth
+}
+
+
+
+/* ================================================= */
+/* Main header */
+/* ================================================= */
+#main-header {
+    padding: 1rem 1.5rem;
+    transition: background-color .4s ease-in-out;
+}
+
+#main-header nav,
+#main-header ul,
+#main-header a {
+
+    align-items: center;
+}
+
+#main-header nav {
+    justify-content: space-between;
+}
+
+#main-header nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0 2em 0 1em;
+    padding: 0;
+    gap: 2rem;
+
+}
+#main-header nav ul li {
+    justify-content: space-between;
+}
+
+
+#main-header__sidebar-toggle {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+}
+
+#toggle-icon-close,
+body.sidebar-open #toggle-icon-menu {
+    display: none;
+}
+
+body.sidebar-open #toggle-icon-close {
+    display: block;
+}
+
+
+
+#main-header__logo,
+#main-header a span {
+    font-weight: 700;
+    margin:2em 0;
+
+
+}
+
+
+
+/* ================================================= */
+/* Main */
+/* ================================================= */
+#main {
+    position: relative;
+}
+
+
+
+/* ================================================= */
+/* Sidebar */
+/* ================================================= */
+#sidebar {
+    background-color: var(--secondary-color);
+    padding: 1.5rem 0 1.5rem 1.5rem;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    min-height: 100%;
+    align-items: flex-start;
+    transform: translate3d(-100%, 0, 0);
+    transition: transform .4s ease-in-out, background-color .4s ease-in-out;
+}
+
+#sidebar__nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar__nav ul a {
+    display: flex;
+    gap: .75rem;
+    align-items: center;
+    text-decoration: none;
+    color: var(--primary-color);
+    padding: .75rem 3rem .75rem 0;
+    transition: color .3s ease-in-out;
+}
+
+#sidebar__nav ul a.active {
+    color: var(--primary-cream);
+    font-weight: 700;
+}
+
+#sidebar__nav ul a:hover {
+    color: var(--primary-cream);
+}
+
+.menu-heading {
+    color: var(--primary-color);
+    font-size: 81.25%;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: .75rem 0;
+}
+
+
+#overlay {
+    position: absolute;
+    inset: 0;
+    background-color: var(--primary-red);
+    opacity: 0;
+    transition: opacity .4s ease-in-out, visibility .4s ease-in-out;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+body.sidebar-open #overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+body.sidebar-open #sidebar {
+    transform: translate3d(0, 0, 0);
+}
+
+
+
+
+/* Main content */
+
+#main-content {
+    /*padding: 1.5rem;*/
+}
+
+#main-content__container {
+    border: 1px dashed black;
+    margin:0 2rem;
+    border-radius: 4px;
+    height: calc(100vh + 10rem);
+    display: flex;
+    place-content: space-around;
+}
+
+
+
+
+/* Large screens */
+
+@media screen and (min-width: 768px) {
+    #main-header__sidebar-toggle {
+        display: none;
+    }
+
+    #main-header__logo {
+        display: block;
+    }
+
+    #main-header svg {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
+    #main-header__logo svg {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    #main-header a {
+        text-decoration: none;
+    }
+
+    #main-header a span {
+        display: inline-block;
+        font-size: 81.25%;
+        color: var(--primary-red);
+        transition: color .4s ease-in-out;
+    }
+
+    #main-header a {
+        gap: .5rem;
+    }
+
+    #sidebar {
+        position: relative;
+        transform: none;
+    }
+
+    #main {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+
+    #sidebar__collapse {
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+        padding: .75rem 0;
+        appearance: none;
+        background: transparent;
+        border: none;
+        font-size: 81.25%;
+        color: var(--primary-red);
+        cursor: pointer;
+    }
+
+
+
+    body.sidebar-collapsed .menu-heading,
+    body.sidebar-collapsed #sidebar span {
+        display: none;
+    }
+
+    body.sidebar-collapsed #sidebar__theme-switcher {
+        display: none;
+    }
+
+    body.sidebar-collapsed #sidebar {
+        padding-right: 1.5rem;
+    }
+
+    body.sidebar-collapsed #sidebar a,
+    body.sidebar-collapsed #sidebar__collapse {
+        width: 2.75rem;
+        padding-right: 0;
+        justify-content: center;
+    }
+
+    body.sidebar-collapsed #sidebar__collapse svg {
+        transform: rotate(180deg);
+    }
+}

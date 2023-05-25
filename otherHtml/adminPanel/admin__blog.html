@@ -22,7 +22,7 @@
                 </a>
             </li>
             <li>
-                <a href="../../index.html">
+                <a href="../../index.html" onclick="logOut()">
                     <span>Logout</span>
                 </a>
             </li>
@@ -58,11 +58,7 @@
                         <span>Blog</span>
                     </a>
                 </li>
-                <li>
-                    <a href="admin__blogDetail.html">
-                        <span>Blog Detail</span>
-                    </a>
-                </li>
+
                 <li>
                     <a href="admin__contact.html">
                         <span>Contact</span>
@@ -76,11 +72,57 @@
 
     <div id="main-content">
         <div id="main-content__container">
-            <p>Blog page</p>
+            <table class="table">
+                <tr>
+                    <th>Number</th>
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td><figure class="gallery__picture" ><img src="../../asset/img/picture01.jpg" alt="img-96Tk0-1641791771.jpg"></figure></td>
+                    <td>Narayanhiti Durbar - Kathmandu,Nepal</td>
+                    <td>The Narayanhiti Palace Museum in Kathmandu, Nepal is a public museum situated east of the Kaiser Mahal</td>
+                    <td>
+
+                        <button class="button__edit" onclick="edit()">Edit</button>
+                        <button class="button__delete" onclick="remove()">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td><figure class="gallery__picture" ><img src="../../asset/img/picture01.jpg" alt="img-96Tk0-1641791771.jpg"></figure></td>
+                    <td>Narayanhiti Durbar - Kathmandu,Nepal</td>
+                    <td>The Narayanhiti Palace Museum in Kathmandu, Nepal is a public museum situated east of the Kaiser Mahal</td>
+                    <td>
+
+                        <button class="button__edit" onclick="edit()">Edit</button>
+                        <button class="button__delete" onclick="remove()">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td><figure class="gallery__picture" ><img src="../../asset/img/picture01.jpg" alt="img-96Tk0-1641791771.jpg"></figure></td>
+                    <td>Narayanhiti Durbar - Kathmandu,Nepal</td>
+                    <td>The Narayanhiti Palace Museum in Kathmandu, Nepal is a public museum situated east of the Kaiser Mahal</td>
+                    <td>
+
+                        <button class="button__edit" onclick="edit()">Edit</button>
+                        <button class="button__delete" onclick="remove()">Delete</button>
+                    </td>
+                </tr>
+            </table>
+            <button class="button__add" onclick="add()">Add</button>
         </div>
     </div> <!-- main-content -->
 </section> <!-- main -->
 
-<script src="app.js"></script>
+
+</section>
+<script src="../../javascript/adminBlog.js"></script>
+<script src="../../javascript/logout.js"></script>
+<script src="../../javascript/logout.js"></script>
 </body>
 </html>

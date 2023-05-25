@@ -1,86 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>TNM Admin Panel</title>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>TNM Admin Panel</title>
 
-  <!-- Main stylesheet -->
-  <link href="../../css/admin.css" rel="stylesheet">
-  <!--    <link rel="stylesheet" href="../../style.css">-->
+    <!-- Main stylesheet -->
+    <link href="../../css/admin.css" rel="stylesheet">
+    <!--    <link rel="stylesheet" href="../../style.css">-->
 </head>
 <body>
 
 
 <header id="main-header">
-  <nav>
-    <ul>
-      <li>
-        <a href="#">
-          <span>Welcome, admin</span>
-        </a>
-      </li>
-      <li>
-        <a href="../../index.html">
-          <span>Logout</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">
+                    <span>Welcome, admin</span>
+                </a>
+            </li>
+            <li>
+                <a href="../../index.html" onclick="logOut()">
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 </header> <!-- main-header -->
 
 <section id="main">
-  <div id="overlay"></div>
-  <div id="sidebar">
-    <nav id="sidebar__nav">
-      <ul>
-        <li class="menu-heading">
-          <span>Manage</span>
-        </li>
-        <li>
-          <a  href="adminHome.html">
-            <span>Home</span>
-          </a>
-        </li>
-        <li>
-          <a class="active" href="admin__about.html">
-            <span>About Us</span>
-          </a>
-        </li>
-        <li>
-          <a href="admin__gallery.html">
-            <span>Gallery</span>
-          </a>
-        </li>
-        <li>
-          <a href="admin__blog.html">
-            <span>Blog</span>
-          </a>
-        </li>
-        <li>
-          <a href="admin__blogDetail.html">
-            <span>Blog Detail</span>
-          </a>
-        </li>
-        <li>
-          <a href="admin__contact.html">
-            <span>Contact</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <div id="overlay"></div>
+    <div id="sidebar">
+        <nav id="sidebar__nav">
+            <ul>
+                <li class="menu-heading">
+                    <span>Manage</span>
+                </li>
+                <li>
+                    <a href="adminHome.html">
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="active" href="admin__about.html">
+                        <span>About Us</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="admin__gallery.html">
+                        <span>Gallery</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="admin__blog.html">
+                        <span>Blog</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="admin__contact.html">
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-    <!-- sidebar__theme-switcher -->
-  </div> <!-- sidebar -->
+        <!-- sidebar__theme-switcher -->
+    </div> <!-- sidebar -->
 
-  <div id="main-content">
-    <div id="main-content__container">
-      <p>About page</p>
-    </div>
-  </div> <!-- main-content -->
+    <div id="main-content">
+        <div id="main-content__container">
+            <table class="table">
+                <tr>
+                    <th>Number</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>The Nepalese Museum</td>
+                    <td>The Nepalese Museum stands as a cultural institution dedicated to preserving and showcasing the
+                        rich heritage and history of Nepal. Located in the heart of the capital city, Kathmandu, this
+                        esteemed museum serves as a gateway to the country's diverse cultural traditions, art, history,
+                        and natural beauty. With its compelling mission and vision, the museum aims to engage visitors,
+                        both local and international, in an immersive journey through Nepal's past, present, and future.
+
+                        The museum's galleries are thoughtfully organized, taking visitors on a chronological and
+                        thematic journey through Nepal's past. Each gallery is carefully curated to showcase a specific
+                        period or aspect of Nepal's cultural evolution. From the ancient civilizations of the Kathmandu
+                        Valley to the medieval kingdoms and the modern era, the exhibits provide a comprehensive
+                        narrative of Nepal's history. Walking through the galleries, visitors encounter a breathtaking
+                        array of artifacts and artworks. Intricately crafted statues of Hindu and Buddhist deities,
+                        delicate thangka paintings depicting religious and mythological scenes, and ancient manuscripts
+                        written on palm leaves offer a glimpse into the spiritual and artistic traditions that have
+                        shaped Nepal's identity.
+
+                        One notable section of the museum is dedicated to the exploration of Nepal's ethnic diversity.
+                        Here, visitors can explore the unique customs, traditions, and costumes of different ethnic
+                        groups that reside within the country. Displayed artifacts, traditional musical instruments, and
+                        interactive displays allow visitors to engage with the rich tapestry of Nepal's cultural mosaic.
+                        To enhance the visitor experience, the Nepalese Museum incorporates multimedia installations,
+                        audio guides, and interactive exhibits. These interactive elements provide additional context,
+                        allowing visitors to delve deeper into the stories behind the artifacts and to gain a more
+                        profound understanding of Nepal's cultural heritage.
+                    </td>
+                    <td>
+                        <button class="button__edit" onclick="edit()">Edit</button>
+                        <button class="button__delete" onclick="remove()">Delete</button>
+                    </td>
+                </tr>
+            </table>
+            <button class="button__add" onclick="add()">Add</button>
+        </div>
+    </div> <!-- main-content -->
 </section> <!-- main -->
 
-<script src="app.js"></script>
+<script src="../../javascript/adminAbout.js"></script>
+<script src="../../javascript/logout.js"></script>
+<script src="../../javascript/goBack.js"></script>
 </body>
 </html>

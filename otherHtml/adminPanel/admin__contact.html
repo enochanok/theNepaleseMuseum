@@ -12,7 +12,6 @@
 </head>
 <body>
 
-
 <header id="main-header">
     <nav>
         <ul>
@@ -22,7 +21,7 @@
                 </a>
             </li>
             <li>
-                <a href="../../index.html">
+                <a href="../../index.html" onclick="logOut()">
                     <span>Logout</span>
                 </a>
             </li>
@@ -59,11 +58,6 @@
                     </a>
                 </li>
                 <li>
-                    <a href="admin__blogDetail.html">
-                        <span>Blog Detail</span>
-                    </a>
-                </li>
-                <li>
                     <a class="active" href="admin__contact.html">
                         <span>Contact</span>
                     </a>
@@ -76,11 +70,38 @@
 
     <div id="main-content">
         <div id="main-content__container">
-            <p>Contact page</p>
+            <table class="table">
+                <tr>
+                    <th>Number</th>
+                    <th>Location</th>
+                    <th>Email 1</th>
+                    <th>Email 2</th>
+                    <th>Contact 1</th>
+                    <th>Contact 2</th>
+                    <th>Action</th>
+
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>Kathmandu, Nepal</td>
+                    <td>enquiry@thenepalesem.com.np </td>
+                    <td>information@thenepalesem.com.np </td>
+                    <td>+977 9876543210</td>
+                    <td> +977 9812345678</td>
+                    <td>
+                        <button class="button__edit" onclick="edit()">Edit</button>
+                        <button class="button__delete" onclick="remove()">Delete</button>
+                    </td>
+                </tr>
+
+            </table>
+            <button class="button__add" onclick="add()">Add</button>
         </div>
     </div> <!-- main-content -->
 </section> <!-- main -->
 
-<script src="app.js"></script>
+<script src="../../javascript/adminContact.js"></script>
+<script src="../../javascript/logout.js"></script>
+<script src="../../javascript/goBack.js"></script>
 </body>
 </html>
